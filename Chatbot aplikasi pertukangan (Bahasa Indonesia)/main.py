@@ -119,6 +119,7 @@ def chat():
         tag = labels[results_index]
 
         if tag == "keluar":
+            reccomend(listToString(order))
             print("Sampai jumpa! Semoga hari Anda menyenangkan!")
             break
 
@@ -137,7 +138,7 @@ def chat():
                 responses = tg['responses']
 
         print(random.choice(responses))
-    reccomend(listToString(order))
+    
 
 
 def reccomend(inp):
