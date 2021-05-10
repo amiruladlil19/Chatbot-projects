@@ -11,6 +11,7 @@ ops.reset_default_graph()
 factory = StemmerFactory()
 stemmer = factory.create_stemmer()
 
+nltk.download('punkt')
 
 with open('intents2.json') as file:
     data = json.load(file)
@@ -119,9 +120,17 @@ def chat():
         tag = labels[results_index]
 
         if tag == "keluar":
-            reccomend(listToString(order))
-            print("Sampai jumpa! Semoga hari Anda menyenangkan!")
-            break
+            if len(order) == 1:
+                print("Anda bisa menemukan layanan tersebut di menu utama kami :)")
+                print("Sampai jumpa! Semoga hari Anda menyenangkan!")
+                break
+            elif len(order) == 0:
+                print("Semoga hari Anda menyenangkan!")
+                break
+            else:
+                reccomend(listToString(order))
+                print("Sampai jumpa! Semoga hari Anda menyenangkan!")
+                break
 
         if tag == 'cat':
             order.append('memulas')
