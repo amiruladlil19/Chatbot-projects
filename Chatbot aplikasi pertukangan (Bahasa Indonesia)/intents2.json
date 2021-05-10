@@ -98,6 +98,20 @@
                 "tidak",
                 "sudah",
                 "cukup"
+            ],"responses": [
+                ""
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "siapa",
+            "patterns": [
+                "siapa ?",
+                "nama ?",
+                "kamu siapa ?"
+                
+            ],"responses": [
+                "Saya adalah chatbot yang akan merekomendasikan layanan yang Anda butuhkan. Ada yang bisa saya bantu?"
             ],
             "context_set": ""
         }
